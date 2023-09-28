@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(https://img.freepik.com/free-photo/abstract-textured-backgound_1258-30581.jpg?w=740&t=st=1695905609~exp=1695906209~hmac=52fbdf6dff32497f9215eae72a181a561a62b39678d0af091f361d05bea8eab3);
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+}
+.cards {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.front,
+.back {
+  width: 25em;
+  height: 15em;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+}
+.front {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 5.4px 12.5px 10px rgba(0, 0, 0, 0.095),
+    43px 100px 80px rgba(0, 0, 0, 0.19);
+  transform: rotate(-10deg);
+  z-index: 1;
+}
+.front > .image-front {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: solid green 25px;
+}
+.front > .id {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.id > h1 {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+.id > p {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.id > p > a {
+  text-decoration: none;
+  color: black;
+}
+.back {
+  display: grid;
+  grid-template-rows: auto 0.2fr;
+  box-shadow: 69px 48px 80px rgba(0, 0, 0, 0.19);
+  transform: rotate(10deg);
+}
+.image {
+  grid-row: 1;
+  place-self: center;
+}
+.barre {
+  grid-row: 2;
+  background-color: green;
+  width: 100%;
+  height: 3em;
+}
